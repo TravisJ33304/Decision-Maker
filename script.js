@@ -46,10 +46,13 @@ window.onload = function() {
         inputs.screen[0].value = 12;
         outputs.screenOutput.innerHTML = inputs.screen[0].value + '"';
         // reset all checkboxes
-        for (prop of inputs) {
-            for (input in prop) {
-                if (input.checked)
-                    input.checked = false;
+        for (input in inputs) {
+            console.log(inputs[input]);
+            for (elem of inputs[input]) {
+                console.log(elem);
+                if (elem.checked) {
+                    elem.checked = false;
+                }
             }
         }
         // reset outputs
