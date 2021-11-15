@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Decision Maker</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Device Picker</h1>
+        <div>
+            <label for="screen">Screen Size</label> <input type="range" name="screen" id="screen" min="4" max="32" value="12"> <label id="screenOutput">12"</label> <br> <br>
+            <label>Operating System</label> <input type="radio" name="os" value="linux" id="linux"> <label for="linux">Linux</label> <input type="radio" name="os" value="windows" id="windows"> <label for="windows">Windows</label> <input type="radio" name="os" value="mac" id="mac"> <label for="mac">Mac OS</label> <input type="radio" name="os" value="ios" id="ios"> <label for="ios">IOS</label> <input type="radio" name="os" value="android" id="android"> <label for="android">Android</label> <br> <br>
+            <label for="input">Input Method(s)</label> <input type="checkbox" name="input" value="touch" id="touch"> <label for="touch">Touch</label> <input type="checkbox" name="input" value="mouse" id="mouse"> <label for="mouse">Mouse and Keyboard</label> <br> <br>
+            <label>Portable</label> <input type="checkbox" name="portable" value="portable" id="portable"> <label for="portable">Yes</label> <br> <br>
+            <input type="button" value="Reset" id="reset"> <input type="submit" id="submit" value="Submit">
+        </div> <br>
+        <div>
+            <h2 id="output">Pick your criteria to get a device.</h2>
+            <img id="outputImage" src="images/pick.png">
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
