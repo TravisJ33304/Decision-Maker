@@ -1,4 +1,6 @@
 function updateOutput(inputs, outputs) { // update the screen with the device
+    // ensure screen output is accurate
+    outputs.screenOutput.innerHTML = inputs.screen[0].value + '"';
     // determine output
     if (inputs.screen[0].value >= 12 && (inputs.os[0].checked || inputs.os[1].checked || inputs.os[2].checked) && !inputs.input[0].checked && inputs.input[1].checked && !inputs.portable[0].checked) {
         outputs.output.innerHTML = "Looks like you could use a desktop.";
@@ -32,6 +34,7 @@ window.onload = function() {
         outputImage: document.getElementById("outputImage"),
     }
     // handle input events
+    outputs.screenOutput.innerHTML = inputs.screen[0].value + '"';
     inputs.screen[0].onchange = function() { // change label when range moved
         outputs.screenOutput.innerHTML = inputs.screen[0].value + '"';
     }
